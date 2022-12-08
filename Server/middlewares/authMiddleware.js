@@ -2,7 +2,6 @@ const ResponseModel = require('../utilities/responseModel');
 const tokenHandler = require('../utilities/tokenHandler');
 
 module.exports = (req, res, next) => {
-    console.log('Auth middleware');
     if(!req.url.startsWith('/api/v1/user')){
         return next();
     }
