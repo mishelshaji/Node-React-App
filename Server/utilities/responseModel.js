@@ -5,6 +5,7 @@ class ResponseModel {
     success = true;
     message = null;
     errors = [];
+    data = null;
     constructor(data = null, message = null, errors=[]) {
         this.data = data;
         this.message = message;

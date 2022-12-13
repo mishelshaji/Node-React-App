@@ -30,3 +30,17 @@ module.exports.create = async (req, res) => {
         res.status(500).json(new ResponseModel(null, null, ['Unable to create contact.']));
     }
 }
+
+module.exports.getOne = async (req, res) => {
+    const id = req.user.id;
+    const contactId = req.params.id;
+    const contact = await Contact.findOne({
+        where: {id: contactId, userId: id}
+    });
+    if(contact){
+        res.json(new ResponseModel(contact));
+    }
+    else{
+        res.status(404).json(new ResponseModel(null, null, ['Contact not found.']));
+    }
+}
