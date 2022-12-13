@@ -1,0 +1,19 @@
+header{
+  background-color: #282c34;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+nav{
+  display: flex;
+  margin-left: auto;
+}
+
+nav a{
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 10px;
+}
